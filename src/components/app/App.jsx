@@ -1,10 +1,12 @@
 import './App.scss';
+import Navbar from '../navbar/Navbar';
+import Hero from '../hero/Hero';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <Navbar></Navbar>
+      <Hero></Hero>
     </div>
   );
 }
-
-export default App;
