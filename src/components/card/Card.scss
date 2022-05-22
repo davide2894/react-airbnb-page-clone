@@ -1,0 +1,37 @@
+@import '../../_shared';
+
+.card {
+    margin-top: 200px;
+
+    &__image-container {
+        width: 176px;
+        height: 235px;
+        position: relative;
+    }
+
+    &__badge {
+        position: absolute;
+        font-size: 11px;
+        line-height: 11px;
+        background-color: white;
+        padding: 4px;
+        border-radius: 2px;
+        top: 6px;
+        left: 6px;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__rating-container {
+        display: flex;
+        margin-top: 9px;
+    }
+
+    &__rating-star {
+        width: 14px;
+        height: 14px;
+        margin-right: 2px;
+    }
+}

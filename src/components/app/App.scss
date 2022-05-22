@@ -2,11 +2,15 @@
 
 .app {
   max-width: 550px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 60px auto;
   background-color: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.hero__grid-container,
+.card {
+  margin: 26px auto 0;
 }
