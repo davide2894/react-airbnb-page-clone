@@ -10,7 +10,7 @@
   border-top-right-radius: 10px;
 }
 
-.hero__grid-container,
-.card {
-  margin: 26px auto 0;
+.hero__grid-container {
+  display: flex;
+  flex-direction: column;
 }

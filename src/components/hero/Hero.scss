@@ -2,14 +2,21 @@
 
 .hero {
     &__grid-container {
-        width: 396px;
-        height: 232px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__grid-image {
-        max-width: 100%;
-        margin-bottom: 32px;
+        width: 396px;
+        height: 232px;
+        margin: 26px auto 32px;
     }
+
+    &__h2,
+    &__p {
+        margin-left: 37px;
+    }
+
 
     &__h2 {
         font-size: 36px;

@@ -1,7 +1,11 @@
 @import '../../_shared';
 
 .card {
-    margin-top: 200px;
+    margin-top: 55px;
+    max-width: 176px;
+    width: 176px;
+    margin-left: 37px;
+    margin-bottom: 30px;
 
     &__image-container {
         width: 176px;
@@ -27,11 +31,47 @@
     &__rating-container {
         display: flex;
         margin-top: 9px;
+        align-items: center;
     }
 
     &__rating-star {
         width: 14px;
         height: 14px;
         margin-right: 2px;
+        line-height: 13px;
+    }
+
+    &__description {
+        margin: 8px 0;  
+    }
+
+    &__price {
+        font-weight: 600;
+    }
+
+    &__price,
+    &__description {
+        font-size: 12px;
+        line-height: 13.2px;
+    }
+
+    &__gray-colored {
+        color: $card-gray;
+    }
+
+    &__dot {
+        width: 2px;
+        height: 2px;
+        border-radius: 1;
+        background-color: $card-gray;
+        margin: 2px 0;
+    }
+
+    &__rating-child {
+        margin-right: 2px;
+    }
+    
+    span {
+        display: inline-block;
     }
 }
