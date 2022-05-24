@@ -8,14 +8,14 @@ export default function Card (props) {
                 <span className='card__badge'>
                     SOLD OUT
                 </span>
-                <img className='card__image' src={props.img} alt='A smiling swim athlete' />
+                <img className='card__image' src={require(`../../assets/images/${props.img}`)} alt='A smiling swim athlete' />
             </div>
             <div className='card__rating-container'>
                 <img className='card__rating-star card__rating-child' src={starIcon} aria-hidden='true' />
                 <span className='card__rating-child'>{props.rating}</span>
                 <span className='card__gray-colored card__rating-child'>{props.reviewCount}</span>
                 <span className='card__gray-colored card__dot card__rating-child'></span>
-                <span className='card__gray-colored card__rating-child'>{props.country}</span>
+                <span className='card__gray-colored card__rating-child'>{props.location}</span>
             </div>
             <div className='card__description'>
                 <span>{props.title}</span>

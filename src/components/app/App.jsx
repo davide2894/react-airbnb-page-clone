@@ -3,32 +3,40 @@ import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
 import Card from '../card/Card';
 import swimAthlete from '../../assets/images/swim_athlete.png';
+import { cardsData } from '../../data/data';
 
 /*
-Challenge: Pass props to the Card component and display that data
+Challenge:
+- import the array of data from data.js
+- map over the array to create <Card /> components
+- display the array of card components under the navbar
+  (in place of the current <Card /> component)
 
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
-
+Note: We haven't styled the group of components yet, so they'll
+still be block elements, stacked vertically. We'll add styling later.
 */
 
 export default function App() {
+
+  const cards = cardsData.map(cardData => {
+    return <Card
+      key={cardData.id.toString()} 
+      img={cardData.coverImg}
+      rating={cardData.stats.rating}
+      reviewCount={cardData.stats.reviewCount}
+      location={cardData.location}
+      title={cardData.title}
+      price={cardData.price}
+    />  
+  });
+
   return (
     <div className="app">
       <Navbar/>
       <Hero/>
-      <Card
-        img={swimAthlete}
-        rating="5.0"
-        reviewCount=" (6)"
-        country="US"
-        title="Life Lessons with Katie Zaferes"
-        price={136}
-      />
+      <section className="cards">
+        {cards}
+      </section>
     </div>
   );
 }
