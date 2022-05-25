@@ -2,12 +2,20 @@ import './Card.scss';
 import starIcon from '../../assets/icons/star_icon.png';
 
 export default function Card (props) {
+    let isSoldout = props.openSpots === 0;
+    let isOnline = props.location == "Online";
+    let badgeText;
+    
+    if(isSoldout) {
+        badgeText = "SOLD OUT";
+    } else if (isOnline) {
+        badgeText = "ONLINE";
+    }
+
     return (
         <div className='card'>
             <div className='card__image-container'>
-                <span className='card__badge'>
-                    SOLD OUT
-                </span>
+                {badgeText && <span className="card__badge">{badgeText}</span>}
                 <img className='card__image' src={require(`../../assets/images/${props.img}`)} alt='A smiling swim athlete' />
             </div>
             <div className='card__rating-container'>

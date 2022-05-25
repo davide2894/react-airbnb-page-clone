@@ -27,6 +27,7 @@ export default function App() {
       location={cardData.location}
       title={cardData.title}
       price={cardData.price}
+      openSpots={cardData.openSpots}
     />  
   });
 
