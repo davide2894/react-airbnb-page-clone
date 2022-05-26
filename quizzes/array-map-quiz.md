@@ -8,4 +8,3 @@
 
 3. Why is using `.map()` better than just creating the components
    manually by typing them out? It makes the work much easier, dynamic, scalable.
-
