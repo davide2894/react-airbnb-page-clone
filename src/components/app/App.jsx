@@ -2,7 +2,6 @@ import './App.scss';
 import Navbar from '../navbar/Navbar';
 import Hero from '../hero/Hero';
 import Card from '../card/Card';
-import swimAthlete from '../../assets/images/swim_athlete.png';
 import { cardsData } from '../../data/data';
 
 /*
